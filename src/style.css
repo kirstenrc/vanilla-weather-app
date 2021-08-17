@@ -55,7 +55,7 @@ a {
   width: 64px;
 }
 
-.temperature {
+#temperature {
   font-size: 64px;
   font-weight: 600;
   line-height: 1;
