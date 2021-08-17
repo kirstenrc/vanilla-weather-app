@@ -55,9 +55,9 @@ a {
   width: 64px;
 }
 
-.weather-temperature strong {
+.temperature {
   font-size: 64px;
-  font-weight: 400px;
+  font-weight: 600;
   line-height: 1;
 }
 
