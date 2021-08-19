@@ -67,9 +67,8 @@ a {
   top: -34px;
 }
 
-.weather-temperature .active {
+.weather-temperature {
   color: #48484a;
-  cursor: default;
 }
 
 .weather-forecast {
