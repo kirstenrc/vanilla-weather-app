@@ -111,4 +111,21 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function retrievePosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let units = "imperial";
+  let apiKey = "b0f53c0693e9322889a32ea02b229166";
+  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+
+let geoLocationButton = document.querySelector("#geo-location-button");
+geoLocationButton.addEventListener("click", getCurrentLocation);
+
 search("Seattle");
