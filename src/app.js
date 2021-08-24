@@ -111,9 +111,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
 function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -125,6 +122,9 @@ function retrievePosition(position) {
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 let geoLocationButton = document.querySelector("#geo-location-button");
 geoLocationButton.addEventListener("click", getCurrentLocation);
