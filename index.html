@@ -25,9 +25,11 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+
+
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-6">
+              <div class="col">
                 <input
                   type="search"
                   placeholder="Search for a city.."
@@ -36,16 +38,18 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col">
                 <input
                   type="submit"
                   value="Search"
                   class="btn btn-secondary w-100"
                 />
               </div>
-              <div class="col-3"><button class="btn btn-info w-100" id="geo-location-button">Current</div>
+              <div class="col"><button class="btn btn-info w-100" id="geo-location-button">Current</div>
             </div>
           </form>
+
+
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -53,8 +57,10 @@
               <li id="description"></li>
             </ul>
           </div>
+
+
           <div class="row">
-            <div class="col-5">
+            <div class="col">
               <div class="d-flex weather-temperature">
                 <img
                   src="https://openweathermap.org/img/wn/01d@2x.png"
@@ -62,24 +68,26 @@
                   class="float-left"
                   id="icon"
                 />
-                <div class="float-left">
+                <div class="">
                   <span id="temperature"></span>
                   <span class="units">°F</span>
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> m/h</li>
               </ul>
             </div>
-            <div class="col-4">
+            <div class="col d-none d-lg-block">
               <img src="images/undraw_Playful_cat_re_bxiu.svg" width="150" id="image">
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
         </div>
+
+
         <small>
           <a
             href="https://github.com/kirstenrc/vanilla-weather-app"
